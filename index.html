@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste du Personnel de l'École</title>
+    <title>Liste contacts Grafipolis et IEQT</title>
     <style>
         .header {
             display: flex;
@@ -103,7 +103,7 @@
             width: 100px;
             height: auto;
             margin-right: 10px;
-            cursor: pointer;
+            cursor: default;
         }
 
         .person p {
@@ -200,7 +200,6 @@
                 <option value="web">Web Design</option>
                 <option value="imprimerie">Imprimerie</option>
                 <option value="façonnage">Façonnage</option>
-                <option value="fabrication">Fabrication</option>
                 <option value="gdp">Gestion de projet</option>
                 <option value="ieqt_f">IEQT</option>
                 <option value="general">Général</option>
@@ -239,7 +238,7 @@
 
     <script>
         var personnel = [
-            { nom: "<strong>Roxane ARLÉO</strong>   /   Formatrice en Arts appliqués et culture artistique", role: "formateur", campus: "grafipolis", domaine: "general", classe: "capsdg,capsib,bacpg,bacpi,bacfpir", photo: "photo/arleo.png" },
+        { nom: "<strong>Roxane ARLÉO</strong>   /   Formatrice en Arts appliqués et culture artistique", role: "formateur", campus: "grafipolis", domaine: "general", classe: "capsdg,capsib,bacpg,bacpi,bacfpir", photo: "photo/arleo.png" },
             { nom: "<strong>Laure BACHELLIER</strong>    /   Chargée de relations candidats-entreprise", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre", photo: "photo/bachellier.png" },
             { nom: "<strong>Amandine BALLON</strong>    /   Formatrice en Production plurimédia (signalétique)", role: "formateur", campus: "grafipolis", domaine: "pao", classe: "bma", photo: "photo/ballon.png" },
             { nom: "<strong>Charlotte BECK</strong> /   Assistante pédagogique", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre", photo: "photo/beck.png" },
@@ -265,7 +264,7 @@
             { nom: "<strong>Gaëlle KÉRVEVANT</strong>   /   Chargée de communication", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre", photo: "photo/kervevant.png" },
             { nom: "<strong>Daniel LEGRIER</strong> /   Responsable développement Apprentissage et Formation continue", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre",  photo: "photo/legrier.png"},
             { nom: "<strong>Patrick MACHICOT</strong>   /   Formateur en Production plurimédia et Web", role: "formateur", campus: "grafipolis", domaine: "pao,web", classe: "bacpg", photo: "photo/machicot.png" },
-            { nom: "<strong>Adrien MARRET</strong>  /   Formateur Gestion de projet, Fabrication, Impression et Façonnage", role: "formateur", campus: "grafipolis", domaine: "imprimerie,façonnage,gdp,fabrication", classe: "bacpg,bacpi,bacfpir,erpcpp,erpcpi", photo: "photo/maret.png" },
+            { nom: "<strong>Adrien MARET</strong>  /   Formateur Gestion de projet, Fabrication, Impression et Façonnage", role: "formateur", campus: "grafipolis", domaine: "imprimerie,façonnage,gdp,fabrication", classe: "bacpg,bacpi,bacfpir,erpcpp,erpcpi", photo: "photo/maret.png" },
             { nom: "<strong>Pascale MARTIN</strong> /   Formatrice en Français et Histoire-Géographie", role: "formateur", campus: "grafipolis", domaine: "general", classe: "capsi,capsdg,bacpg,bacpi,bacfpir,bma", photo: "photo/martin.png" },
             { nom: "<strong>Sarah MÉNARD</strong>   /   Formatrice en Anglais", role: "formateur", campus: "grafipolis", domaine: "general", classe: "bacpg,bacpi,bacfpir,bma,erpcpp,erpcpi,qse+3,mqse+5", photo: "photo/menard.png" },
             { nom: "<strong>Valérie MINLOT</strong> /   Assistante de gestion", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre", photo: "photo/minlo.png" },
@@ -277,7 +276,7 @@
             { nom: "<strong>Pierre RUIZ</strong>    /    Formateur en Fabrication, gestion de projet et PAO", role: "formateur", campus: "grafipolis", domaine: "pao,gdp,fabrication", classe: "erpcpp,erpcpi,web+", photo: "photo/ruiz.png" },
             { nom: "<strong>Philippe TANGUY</strong>    /   Formateur en Impression,Fabrication et Gestion de projet", role: "formateur", campus: "grafipolis", domaine: "imprimerie,façonnage,fabrication", classe: "bacpg,bacpi,erpcpi,erpcpp", photo: "photo/tanguy.png" },
             { nom: "<strong>Adeline TUDEAU</strong> /   Psychologue et Référente handicap", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre", photo: "photo/tudeau.png" },            
-        ];
+        ];        ];
 
 
         function displayPersonnel(personnelList) {
@@ -310,28 +309,7 @@
             });
 
             displayPersonnel(filteredPersonnel);
-        }
 
-        function showModal(person) {
-            var modal = document.getElementById('modal');
-            var modalImage = document.getElementById('modalImage');
-            var modalDescription = document.getElementById('modalDescription');
-
-            modalImage.src = person.photo ? person.photo : 'https://grafipolis.fr/wp-content/uploads/2024/05/default-user-image.png';
-            modalDescription.innerHTML = person.nom;
-
-            modal.style.display = 'block';
-
-            var closeBtn = document.getElementsByClassName('close')[0];
-            closeBtn.onclick = function () {
-                modal.style.display = 'none';
-            };
-
-            window.onclick = function (event) {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                }
-            };
         }
 
         displayPersonnel(personnel);
