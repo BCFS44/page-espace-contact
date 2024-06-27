@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Liste contacts Grafipolis et IEQT</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste contacts Grafipolis et IEQT</title>
+  <style>
         .header {
             display: flex;
             align-items: center;
@@ -53,7 +53,7 @@
             align-items: center;
             padding: 20px;
             max-width: 1400px;
-}
+  }
 
         .filter {
             margin-bottom: 10px;
@@ -165,78 +165,128 @@
             margin: 20px auto; 
         }
 
-    </style>
+  </style>
 </head>
 <body>
-    <div class="header">
+  <div class="header">
     <div class="logo">
-        <a href="grafipolis.fr"><img id="logo" src="grafipolis.png" alt="Logo"></a>    </div>
+      <a href="grafipolis.fr"><img id="logo" src="grafipolis.png" alt="Logo"></a>
+    </div>
     <h1>Page Contact</h1>
-</div>
-    <div class="filter-container">
-        <div class="filter">
-            <label for="role">Rôle à Grafipolis :</label>
-            <select id="role">
-                <option value="tous">Tous</option>
-                <option value="formateur">Formateur</option>
-                <option value="persoadm">Personnel administratif</option>
-            </select>
-        </div>
-        <div class="filter">
-            <label for="campus">Campus :</label>
-            <select id="campus">
-                <option value="tous">Tous</option>
-                <option value="grafipolis">Grafipolis</option>
-                <option value="ieqt">IEQT</option>
-            </select>
-        </div>
-        <div class="filter">
-            <label for="domaine">Domaine d'activités :</label>
-            <select id="domaine">
-                <option value="tous">Tous</option>
-                <option value="sérigraphie">Sérigraphie</option>
-                <option value="signalétique">Signalétique</option>
-                <option value="pao">Pré-presse</option>
-                <option value="web">Web Design</option>
-                <option value="imprimerie">Imprimerie</option>
-                <option value="façonnage">Façonnage</option>
-                <option value="gdp">Gestion de projet</option>
-                <option value="ieqt_f">IEQT</option>
-                <option value="general">Général</option>
-                <option value="administratif">Administratif</option>
-            </select>
-        </div>
-        <div class="filter">
-            <label for="classe">Classe d'intervention :</label>
-            <select id="classe">
-                <option value="tous">Tous</option>
-                <option value="capsi">CAP SI</option>
-                <option value="capsdg">CAP SDG</option>
-                <option value="bma">BMA</option>
-                <option value="bacpg">BAC PG</option>
-                <option value="bacpi">BAC PI</option>
-                <option value="bacfpir">BAC FPIR</option>
-                <option value="erpcpp">BTS ERPC PP</option>
-                <option value="erpcpi">BTS ERPC PI</option>
-                <option value="web+3">BAC+3 WEB</option>
-                <option value="qse+3">BAC+3 QSE</option>
-                <option value="mqse+5">BAC+5 M QSE</option>
-            </select>
-        </div>
+  </div>
+  <div class="filter-container">
+    <div class="filter">
+      <label for="role">Rôle à Grafipolis :</label> <select id="role">
+        <option value="tous">
+          Tous
+        </option>
+        <option value="formateur">
+          Formateur
+        </option>
+        <option value="persoadm">
+          Personnel administratif
+        </option>
+      </select>
     </div>
-
-    <div id="liste_personnel">
+    <div class="filter">
+      <label for="campus">Campus :</label> <select id="campus">
+        <option value="tous">
+          Tous
+        </option>
+        <option value="grafipolis">
+          Grafipolis
+        </option>
+        <option value="ieqt">
+          IEQT
+        </option>
+      </select>
     </div>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <img id="modalImage" src="" alt="Photo de la personne">
-            <div id="modalDescription" class="description"></div>
-        </div>
+    <div class="filter">
+      <label for="domaine">Domaine d'activités :</label> <select id="domaine">
+        <option value="tous">
+          Tous
+        </option>
+        <option value="sérigraphie">
+          Sérigraphie
+        </option>
+        <option value="signalétique">
+          Signalétique
+        </option>
+        <option value="pao">
+          Pré-presse
+        </option>
+        <option value="web">
+          Web Design
+        </option>
+        <option value="imprimerie">
+          Imprimerie
+        </option>
+        <option value="façonnage">
+          Façonnage
+        </option>
+        <option value="gdp">
+          Gestion de projet
+        </option>
+        <option value="ieqt_f">
+          IEQT
+        </option>
+        <option value="general">
+          Général
+        </option>
+        <option value="administratif">
+          Administratif
+        </option>
+      </select>
     </div>
-
-    <script>
+    <div class="filter">
+      <label for="classe">Classe d'intervention :</label> <select id="classe">
+        <option value="tous">
+          Tous
+        </option>
+        <option value="capsi">
+          CAP SI
+        </option>
+        <option value="capsdg">
+          CAP SDG
+        </option>
+        <option value="bma">
+          BMA
+        </option>
+        <option value="bacpg">
+          BAC PG
+        </option>
+        <option value="bacpi">
+          BAC PI
+        </option>
+        <option value="bacfpir">
+          BAC FPIR
+        </option>
+        <option value="erpcpp">
+          BTS ERPC PP
+        </option>
+        <option value="erpcpi">
+          BTS ERPC PI
+        </option>
+        <option value="web+3">
+          BAC+3 WEB
+        </option>
+        <option value="qse+3">
+          BAC+3 QSE
+        </option>
+        <option value="mqse+5">
+          BAC+5 M QSE
+        </option>
+      </select>
+    </div>
+  </div>
+  <div id="liste_personnel"></div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">×</span> <img id="modalImage" src="" alt="Photo de la personne">
+      <div id="modalDescription" class="description"></div>
+    </div>
+  </div>
+  <script>
         var personnel = [
             { nom: "<strong>Roxane ARLÉO</strong>   /   Formatrice en Arts appliqués et culture artistique", role: "formateur", campus: "grafipolis", domaine: "general", classe: "capsdg,capsib,bacpg,bacpi,bacfpir", photo: "photo/arleo.png" },
             { nom: "<strong>Laure BACHELLIER</strong>    /   Chargée de relations candidats-entreprise", role: "persoadm", campus: "grafipolis", domaine: "administratif", classe: "autre", photo: "photo/bachellier.png" },
@@ -318,6 +368,6 @@
         document.getElementById('campus').addEventListener('change', filterPersonnel);
         document.getElementById('domaine').addEventListener('change', filterPersonnel);
         document.getElementById('classe').addEventListener('change', filterPersonnel);
-    </script>
+  </script>
 </body>
 </html>
